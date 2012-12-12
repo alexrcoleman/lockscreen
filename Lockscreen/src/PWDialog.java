@@ -104,7 +104,7 @@ public class PWDialog extends JFrame implements ActionListener {
 		setResizable(false);
 		setAlwaysOnTop(true);
 		setUndecorated(true);
-		setBackground(new Color(0.8F, 0.8F, 0.8F, 0.25F));
+		setBackground(new Color(0.1F, 0.1F, 0.1F, 0.50F));
 		pack();
 		setVisible(true);
 		requestFocus();
