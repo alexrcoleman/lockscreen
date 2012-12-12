@@ -29,6 +29,7 @@ public class PWLauncher extends JDialog implements ActionListener {
 			}
 		});
 		setDefaultCloseOperation(2);
+		setAlwaysOnTop(true);
 		setFocusable(true);
 		setVisible(true);
 	}

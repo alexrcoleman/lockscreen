@@ -15,11 +15,11 @@ import java.util.TimerTask;
 import javax.imageio.ImageIO;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
-import javax.swing.JFrame;
+import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 
-public class PWDialog extends JFrame implements ActionListener {
+public class PWDialog extends JDialog implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private static final String pw = "123456";
 	private JPasswordField pwField;
