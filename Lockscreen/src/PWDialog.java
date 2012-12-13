@@ -26,6 +26,7 @@ public class PWDialog extends JDialog implements ActionListener {
 	private JPanel mainPanel;
 	private JPanel pwMainPanel;
 	private ImagePanel imagePanel;
+	private WindowsSecurity security;
 	static final String PWMAINPANEL = "Card with Password Field";
 	static final String IMAGEPANEL = "Card with Images";
 	public static Dimension SCREENDIM;
@@ -108,6 +109,7 @@ public class PWDialog extends JDialog implements ActionListener {
 		pack();
 		setVisible(true);
 		requestFocus();
+		security = new WindowsSecurity(this);
 	}
 
 	public boolean checkPassword(String in) {
@@ -129,6 +131,7 @@ public class PWDialog extends JDialog implements ActionListener {
 			public void run() {
 				PWDialog.instance.dispose();
 				PWLauncher.toggleIcon();
+				security.stop();
 			}
 		}, 2000L);
 	}
