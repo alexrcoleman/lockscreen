@@ -42,6 +42,7 @@ public class PWLauncher extends JDialog implements ActionListener {
 		PopupMenu popupMenu = new PopupMenu();
 		SystemTray tray = SystemTray.getSystemTray();
 		trayIcon = new TrayIcon(createImage("images/UnlockedIcon.png"));
+		trayIcon.setToolTip("Screen locker - UNLOCKED");
 		trayIcon.addActionListener(this);
 
 		MenuItem exitItem = new MenuItem("Exit");
@@ -71,10 +72,13 @@ public class PWLauncher extends JDialog implements ActionListener {
 	public static void toggleIcon() {
 		locked = !locked;
 		final String path;
-		if (locked)
+		if (locked) {
 			path = "images/LockedIcon.png";
-		else
+			trayIcon.setToolTip("Screen locker - LOCKED");
+		} else {
 			path = "images/UnlockedIcon.png";
+			trayIcon.setToolTip("Screen locker - UNLOCKED");
+		}
 		trayIcon.setImage(createImage(path));
 	}
 
